@@ -1,6 +1,6 @@
 # Exercise 8 - Jenkins Hello World Job
 
-Date: 2026-09-20
+Date: 2026-10-04
 
 The shell script can be used in the handout's Freestyle job. This folder also
 includes a Jenkinsfile so the same job can be kept as code.

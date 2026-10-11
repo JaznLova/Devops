@@ -1,6 +1,6 @@
 # Exercise 6 - Prometheus and Grafana Monitoring
 
-Date: 2026-09-06
+Date: 2026-09-20
 
 This stack runs the delivery simulator, Prometheus, and Grafana on one Compose
 network. The Prometheus data source is provisioned automatically.

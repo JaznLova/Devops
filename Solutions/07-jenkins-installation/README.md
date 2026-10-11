@@ -1,6 +1,6 @@
 # Exercise 7 - Jenkins CI Installation
 
-Date: 2026-09-13
+Date: 2026-09-27
 
 The custom image installs the Git and Pipeline plugins during the image build,
 and a named volume preserves Jenkins configuration.

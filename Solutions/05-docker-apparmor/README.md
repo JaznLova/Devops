@@ -1,6 +1,6 @@
 # Exercise 5 - Docker Security with AppArmor
 
-Date: 2026-08-30
+Date: 2026-09-13
 
 AppArmor is available on Linux hosts; Docker Desktop on Windows cannot run this
 profile directly. On an AppArmor-enabled Linux machine:

@@ -1,6 +1,6 @@
 # Exercise 4 - Docker Networking
 
-Date: 2026-08-23
+Date: 2026-09-06
 
 The Compose file creates one user-defined bridge network and connects the
 Flask, MySQL, and Redis containers to it.

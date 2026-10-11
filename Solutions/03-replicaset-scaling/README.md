@@ -1,6 +1,6 @@
 # Exercise 3 - ReplicaSet Scaling
 
-Date: 2026-08-16
+Date: 2026-08-23
 
 ```bash
 minikube start --nodes=1

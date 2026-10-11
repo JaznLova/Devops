@@ -1,6 +1,6 @@
 # Exercise 2 - Flask on Minikube
 
-Date: 2026-08-09
+Date: 2026-08-16
 
 ```bash
 minikube start

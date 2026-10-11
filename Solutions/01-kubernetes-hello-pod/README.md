@@ -1,6 +1,6 @@
 # Exercise 1 - Kubernetes Hello Pod
 
-Date: 2026-08-02
+Date: 2026-08-08
 
 This manifest runs the Nginx storefront as a Pod and exposes it through a
 NodePort Service.

@@ -1,0 +1,51 @@
+pipeline {
+    agent any
+
+    environment {
+        VENV = "${WORKSPACE}/.venv"
+        DEPLOY_DIR = "${WORKSPACE}/python-app-deploy"
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh '''
+                    python3 -m venv "$VENV"
+                    "$VENV/bin/pip" install --disable-pip-version-check -r requirements.txt
+                '''
+            }
+        }
+        stage('Test') {
+            steps {
+                sh '"$VENV/bin/python" -m unittest -v'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh '''
+                    rm -rf "$DEPLOY_DIR"
+                    mkdir -p "$DEPLOY_DIR"
+                    cp app.py requirements.txt "$DEPLOY_DIR"/
+                '''
+            }
+        }
+        stage('Smoke Test') {
+            steps {
+                sh '''
+                    cd "$DEPLOY_DIR"
+                    PYTHONPATH=. "$VENV/bin/python" -c "from app import app; response=app.test_client().get('/health'); assert response.status_code == 200"
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            archiveArtifacts artifacts: 'python-app-deploy/**', fingerprint: true
+            echo 'Pipeline completed successfully.'
+        }
+        always {
+            junit allowEmptyResults: true, testResults: 'test-results/*.xml'
+        }
+    }
+}
