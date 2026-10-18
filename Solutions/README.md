@@ -1,6 +1,6 @@
 # DevOps Lab Solutions
 
-This directory contains reproducible artifacts for Exercises 1-9. Each exercise
+This directory contains reproducible artifacts for Exercises 1-10. Each exercise
 has its own README with commands, verification steps, and cleanup instructions.
 
 | Exercise | Topic | Organizer date |
@@ -14,6 +14,7 @@ has its own README with commands, verification steps, and cleanup instructions.
 | 7 | Jenkins installation | 2026-09-27 |
 | 8 | Jenkins Hello World job | 2026-10-04 |
 | 9 | Jenkins multi-stage pipeline | 2026-10-11 |
+| 10 | Multi-node, multi-app Minikube deployment | 2026-10-18 |
 
 The source code and configuration files can be checked without a live lab.
 Runtime evidence still needs Docker, Minikube, Kubernetes, Jenkins, and AppArmor
